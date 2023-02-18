@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container">
+        <h2>Calculator</h2>
+<div id="warning-bar" class="warning-bar hidden">
+    <span class="message"></span>
+    <button id="warning-close" class="close-button">&times;</button>
+</div>
+
+    <form id="calculator">
+        <label for="income">Total Annual Income: <br/> <span>Before Taxes</span></label>
+        <input type="number" id="income" name="income" required><br><br>
+
+        <label for="workhours">Average Total Work Hours PER WEEK: <br /> <span>Include commute time.</span></label>
+        <input type="number" id="workhours" name="workhours" required><br><br>
+
+        <label for="sleephours">Average Sleep Hours PER NIGHT:</label>
+        <input type="number" id="sleephours" name="sleephours" required><br><br>
+
+        <button type="submit" onclick="calculate(event)" id="submitform">Calculate</button>
+        <button type="button" onclick="clearForm()" id="resetbtn">Clear</button><br><br>
+    </form>
+
+    <div class="results">
+    <h2>Result</h2>
+    <label for="personaltime">Personal Time:</label>
+    <span id="personaltime">0</span><span> $/Hour</span><br><br>
+
+    <label for="worktime">Work Time:</label>
+    <span id="worktime">0</span><span> $/Hour</span><br><br>
+
+    <label for="personalhours">Hours of Personal Time Each Week:</label>
+    <span id="personalhours">0</span><span> Hours</span><br><br>
+</div>
+</div>
+    <script src="calculator.js"></script>
+    <!-- <script src="main.js"></script> -->
+
+</body>
+
+</html>
